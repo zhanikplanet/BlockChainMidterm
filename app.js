@@ -123,7 +123,7 @@ async function loadModels() {
 
         for (let i = 1; i <= modelCount; i++) {
             const modelDetails = await contract.methods.getModelDetails(i).call(); // Получите детали модели
-            const averageRating = modelDetails[4] > 0 ? (modelDetails[4] / modelDetails[3]).toFixed(1) : 'N/A'; // Используйте новый расчет
+            const averageRating = modelDetails[4] 
 
             modelList.innerHTML += `
                 <div>
