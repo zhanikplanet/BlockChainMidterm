@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input {
+            margin-right: 10px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #modelList div {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Model Marketplace</h1>
+
+    <h2>List a New AI Model</h2>
+    <form id="listModelForm">
+        <input type="text" id="modelName" placeholder="Model Name" required>
+        <input type="text" id="modelDescription" placeholder="Description" required>
+        <input type="text" id="modelPrice" placeholder="Price (in wei)" inputmode="decimal" required>
+        <button type="submit">List Model</button>
+    </form>
+
+    <h2>Available Models</h2>
+    <div id="modelList"></div>
+
+    <h2>Purchase a Model</h2>
+    <input type="number" id="purchaseModelId" placeholder="Model ID">
+    <button id="purchaseModelButton">Purchase Model</button>
+
+    <h2>Rate a Model</h2>
+    <input type="number" id="rateModelId" placeholder="Model ID">
+    <input type="number" id="modelRating" placeholder="Rating (1-5)">
+    <button id="rateModelButton">Rate Model</button>
+
+    <h2>Withdraw Funds</h2>
+    <button id="withdrawFundsButton">Withdraw Funds</button>
+
+    <!-- Load external app.js script -->
+    <script src="app.js"></script>
+    <!-- Load Web3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.0/web3.min.js"></script>
+</body>
+</html>
